@@ -1,0 +1,94 @@
+// Place your key bindings in this file to override the defaults
+[ 
+  // NAVIGATION
+  {
+    "key": "ctrl+shift+a",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  // FILE TREE
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "ctrl+n",
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "ctrl+h",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
+  },
+  {
+    "command": "workbench.action.focusActiveEditorGroup",
+    "key": "ctrl+l",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "shift+w",
+    "command": "workbench.action.newWindow",
+    "when": "!explorerViewletFocus && vim.mode != 'Insert'"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  //DEBUGGING
+  {
+    "command": "workbench.action.debug.continue",
+    "key": "c",
+    "when": "inDebugMode && vim.mode == 'Normal'"
+  },
+  {
+    "command": "workbench.action.debug.stepOver",
+    "key": "o",
+    "when": "inDebugMode && vim.mode == 'Normal'"
+  },
+  {
+    "command": "workbench.action.debug.stepInto",
+    "key": "i",
+    "when": "inDebugMode && vim.mode == 'Normal'"
+  },
+  {
+    "command": "workbench.action.debug.stepOut",
+    "key": "u",
+    "when": "inDebugMode && vim.mode == 'Normal'"
+  },
+  // EXTRA
+  {
+    "key": "ctrl+shift+z",
+    "command": "workbench.action.toggleZenMode"
+  }
+]

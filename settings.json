@@ -1,0 +1,89 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "editor.accessibilitySupport": "off",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vim.leader": "<space>",
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.surround": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<Tab>"], "commands": [":bnext"] },
+    { "before": ["<S-Tab>"], "commands": [":bprevious"] },
+    // close buffer 
+    { "before": ["leader", "x"], "commands": [":bd"] },
+    
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+
+    // DEBUGGING
+    {
+      "before": ["leader", "d", "b"],
+      "commands": ["workbench.action.debug.start"],
+    },
+    {
+      "before": ["leader", "d", "s"],
+      "commands": ["workbench.action.debug.stop"]
+    },
+    // NICE TO HAVE
+    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z" ] },
+    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z" ] },
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    { "before": ["<C-j>"], "after": ["<Down>"] },
+    { "before": ["<C-k>"], "after": ["<Up>"] },
+    { "before": ["<C-h>"], "after": ["<Left>"] },
+    { "before": ["<C-l>"], "after": ["<Right>"] },
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
+  ],
+}
