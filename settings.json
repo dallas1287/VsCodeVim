@@ -61,6 +61,7 @@
       "commands": ["workbench.action.debug.stop"]
     },
     // NICE TO HAVE
+    { "before": ["K"], "commands": ["editor.action.showHover"] },
     { "before": ["<C-d>"], "after": ["<C-d>", "z", "z" ] },
     { "before": ["<C-u>"], "after": ["<C-u>", "z", "z" ] },
     { "before": ["leader", "w"], "commands": [":w!"] },
@@ -68,7 +69,10 @@
     {
       "before": ["<leader>", "c", "a"],
       "commands": ["editor.action.quickFix"]
-    }
+    },
+    {
+      "before": ["<leader>", "g", "r" ], "commands": [ "references-view.findReferences" ]
+    },
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     { "before": ["<C-j>"], "after": ["<Down>"] },

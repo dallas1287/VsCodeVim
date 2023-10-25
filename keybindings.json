@@ -43,7 +43,7 @@
   {
     "command": "workbench.files.action.focusFilesExplorer",
     "key": "ctrl+h",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && vim.mode == 'Normal' && !codeActionMenuVisible && !suggestWidgetVisible"
   },
   {
     "command": "workbench.action.focusActiveEditorGroup",
@@ -90,6 +90,27 @@
     "command": "workbench.action.debug.stepOut",
     "key": "u",
     "when": "debugState == 'Stopped' && vim.mode == 'Normal'"
+  },
+  //CODE SUGGESTIONS
+  {
+    "command": "selectNextSuggestion",
+    "key": "ctrl+n",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "command": "selectPrevSuggestion",
+    "key": "ctrl+p",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "command": "selectNextCodeAction",
+    "key": "ctrl+n",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "command": "selectPrevCodeAction",
+    "key": "ctrl+p",
+    "when": "codeActionMenuVisible"
   },
   //NEW VSCODE WINDOW INSTANCE
   {
