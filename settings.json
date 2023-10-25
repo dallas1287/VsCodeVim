@@ -39,11 +39,11 @@
       "commands": ["workbench.action.focusLeftGroup"]
     },
     {
-      "before": ["<C-j>"],
+      "before": ["<leader>", "j"],
       "commands": ["workbench.action.focusBelowGroup"]
     },
     {
-      "before": ["<C-k>"],
+      "before": ["<leader>", "k"],
       "commands": ["workbench.action.focusAboveGroup"]
     },
     {

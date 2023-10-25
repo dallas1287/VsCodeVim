@@ -1,29 +1,39 @@
 // Place your key bindings in this file to override the defaults
 [ 
-  // NAVIGATION
+  //TERMINAL 
   {
-    "key": "ctrl+shift+a",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+shift+b",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+shift+j",
+    "key": "ctrl+t",
     "command": "workbench.action.togglePanel"
   },
   {
-    "key": "ctrl+shift+n",
+    "key": "alt+n",
     "command": "workbench.action.terminal.new",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+w",
+    "key": "alt+x",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.focusActiveEditorGroup",
+    "key": "ctrl+k",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.terminal.focus",
+    "key": "ctrl+j",
+    "when": "editorTextFocus"
   },
   // FILE TREE
   {
@@ -33,7 +43,7 @@
   {
     "command": "workbench.files.action.focusFilesExplorer",
     "key": "ctrl+h",
-    "when": "editorTextFocus && vim.mode != 'Insert'"
+    "when": "editorTextFocus"
   },
   {
     "command": "workbench.action.focusActiveEditorGroup",
@@ -56,11 +66,6 @@
     "when": "explorerViewletFocus"
   },
   {
-    "key": "shift+w",
-    "command": "workbench.action.newWindow",
-    "when": "!explorerViewletFocus && vim.mode != 'Insert'"
-  },
-  {
     "command": "deleteFile",
     "key": "d",
     "when": "filesExplorerFocus && !inputFocus"
@@ -69,26 +74,32 @@
   {
     "command": "workbench.action.debug.continue",
     "key": "c",
-    "when": "inDebugMode && vim.mode == 'Normal'"
+    "when": "debugState == 'Stopped' && vim.mode == 'Normal'"
   },
   {
     "command": "workbench.action.debug.stepOver",
     "key": "o",
-    "when": "inDebugMode && vim.mode == 'Normal'"
+    "when": "debugState == 'Stopped' && vim.mode == 'Normal'"
   },
   {
     "command": "workbench.action.debug.stepInto",
     "key": "i",
-    "when": "inDebugMode && vim.mode == 'Normal'"
+    "when": "debugState == 'Stopped' && vim.mode == 'Normal'"
   },
   {
     "command": "workbench.action.debug.stepOut",
     "key": "u",
-    "when": "inDebugMode && vim.mode == 'Normal'"
+    "when": "debugState == 'Stopped' && vim.mode == 'Normal'"
   },
-  // EXTRA
+  //NEW VSCODE WINDOW INSTANCE
   {
-    "key": "ctrl+shift+z",
+    "key": "alt+w",
+    "command": "workbench.action.newWindow",
+    "when": "!explorerViewletFocus"
+  },
+  //ZEN MODE 
+  {
+    "key": "alt+z",
     "command": "workbench.action.toggleZenMode"
   }
 ]
