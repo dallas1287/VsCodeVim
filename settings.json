@@ -4,6 +4,18 @@
   "[python]": {
     "editor.formatOnType": true
   },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+        80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
   "editor.accessibilitySupport": "off",
   "diffEditor.ignoreTrimWhitespace": false,
   "github.copilot.enable": {
@@ -60,23 +72,28 @@
       "before": ["leader", "d", "s"],
       "commands": ["workbench.action.debug.stop"]
     },
-    // NICE TO HAVE
+    // PROBLEMS (matched to neovim trouble plugin)
+    {
+      "before": ["leader", "t", "x"], "commands": ["workbench.actions.view.problems"]
+    },
+    // GO TO DEFINITION and IMPLEMENTATIONS (matched to telescope plugin)
     { "before": ["leader", "g", "d"], "commands": ["editor.action.revealDefinition"]},
     { "before": ["leader", "g", "D"], "commands": ["editor.action.peekDefinition"]},
     { "before": ["leader", "g", "i"], "commands": ["editor.action.goToImplementation"]},
     { "before": ["leader", "g", "I"], "commands": ["editor.action.peekImplementation"]},
+    //REFERENCES (matched to telescope plugin)
+    { "before": ["<leader>", "g", "r" ], "commands": [ "references-view.findReferences" ] },
+    //HOVER
     { "before": ["K"], "commands": ["editor.action.showHover"] },
+    //QUICKFIX (matched to neovim lsp code actions)
+    { "before": ["<leader>", "c", "a"], "commands": ["editor.action.quickFix"] },
+    //CUSTOM
     { "before": ["<C-d>"], "after": ["<C-d>", "z", "z" ] },
     { "before": ["<C-u>"], "after": ["<C-u>", "z", "z" ] },
     { "before": ["leader", "w"], "commands": [":w!"] },
     { "before": ["leader", "q"], "commands": [":q!"] },
-    {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"]
-    },
-    {
-      "before": ["<leader>", "g", "r" ], "commands": [ "references-view.findReferences" ]
-    },
+    //brings up the find and replace menu expanded unlike Ctrl+F, but it's still not as good as vims search and replace (:s/old/new/gc)
+    { "before": ["leader", "f"], "commands": ["editor.action.startFindReplaceAction"]},
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     { "before": ["<C-j>"], "after": ["<Down>"] },

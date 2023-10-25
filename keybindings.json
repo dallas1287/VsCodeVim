@@ -28,17 +28,18 @@
   {
     "command": "workbench.action.focusActiveEditorGroup",
     "key": "ctrl+k",
-    "when": "terminalFocus"
+    "when": "terminalFocus || problemFocus"
   },
   {
     "command": "workbench.action.terminal.focus",
     "key": "ctrl+j",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && vim.mode != 'Insert'"
   },
   // FILE TREE
   {
     "command": "workbench.action.toggleSidebarVisibility",
     "key": "ctrl+n",
+    "when": "vim.mode == 'Normal' && !codeActionMenuVisible && !suggestWidgetVisible"
   },
   {
     "command": "workbench.view.extension.references-view",
