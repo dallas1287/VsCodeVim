@@ -61,6 +61,10 @@
       "commands": ["workbench.action.debug.stop"]
     },
     // NICE TO HAVE
+    { "before": ["leader", "g", "d"], "commands": ["editor.action.revealDefinition"]},
+    { "before": ["leader", "g", "D"], "commands": ["editor.action.peekDefinition"]},
+    { "before": ["leader", "g", "i"], "commands": ["editor.action.goToImplementation"]},
+    { "before": ["leader", "g", "I"], "commands": ["editor.action.peekImplementation"]},
     { "before": ["K"], "commands": ["editor.action.showHover"] },
     { "before": ["<C-d>"], "after": ["<C-d>", "z", "z" ] },
     { "before": ["<C-u>"], "after": ["<C-u>", "z", "z" ] },
