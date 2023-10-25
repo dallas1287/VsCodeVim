@@ -41,6 +41,11 @@
     "key": "ctrl+n",
   },
   {
+    "command": "workbench.view.extension.references-view",
+    "key": "ctrl+r",
+    "when": "editorTextFocus || filesExplorerFocus"
+  },
+  {
     "command": "workbench.files.action.focusFilesExplorer",
     "key": "ctrl+h",
     "when": "editorTextFocus && vim.mode == 'Normal' && !codeActionMenuVisible && !suggestWidgetVisible"
@@ -48,7 +53,7 @@
   {
     "command": "workbench.action.focusActiveEditorGroup",
     "key": "ctrl+l",
-    "when": "filesExplorerFocus"
+    "when": "sideBarFocus"
   },
   {
     "key": "a",
