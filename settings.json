@@ -1,4 +1,5 @@
 {
+  "csharp.semanticHighlighting.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
   "editor.formatOnSave": true,
   "[python]": {
@@ -91,6 +92,7 @@
     { "before": ["<C-d>"], "after": ["<C-d>", "z", "z" ] },
     { "before": ["<C-u>"], "after": ["<C-u>", "z", "z" ] },
     { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "W"], "commands": ["saveAll"]},
     { "before": ["leader", "q"], "commands": [":q!"] },
     //brings up the find and replace menu expanded unlike Ctrl+F, but it's still not as good as vims search and replace (:s/old/new/gc)
     { "before": ["leader", "f"], "commands": ["editor.action.startFindReplaceAction"]},
