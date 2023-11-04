@@ -1,5 +1,11 @@
 {
   "csharp.semanticHighlighting.enabled": true,
+  "editor.semanticTokenColorCustomizations": {
+      "enabled": true, 
+      "rules": {
+        "interface:csharp": { "foreground": "#aaaadc" },
+      },
+  },
   "security.workspace.trust.untrustedFiles": "open",
   "editor.formatOnSave": true,
   "[python]": {
