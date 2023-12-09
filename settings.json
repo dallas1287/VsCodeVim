@@ -1,10 +1,10 @@
 {
   "csharp.semanticHighlighting.enabled": true,
   "editor.semanticTokenColorCustomizations": {
-      "enabled": true, 
-      "rules": {
-        "interface:csharp": { "foreground": "#aaaadc" },
-      },
+    "enabled": true,
+    "rules": {
+      "interface:csharp": { "foreground": "#aaaadc" }
+    }
   },
   "security.workspace.trust.untrustedFiles": "open",
   "editor.formatOnSave": true,
@@ -14,14 +14,12 @@
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.rulers": [
-        80
-    ],
+    "editor.rulers": [80],
     "editor.selectionHighlight": false,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false
+    "editor.wordBasedSuggestions": "off"
   },
   "editor.accessibilitySupport": "off",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -32,22 +30,25 @@
     "scminput": false
   },
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+    "vscodevim.vim": 1
   },
   "vim.leader": "<space>",
-  "vim.hlsearch": true,
+  "vim.hlsearch": false,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.surround": true,
+  "vim.mouseSelectionGoesIntoVisualMode": false,
+  "vim.whichwrap": "h,l",
+  "vim.overrideCopy": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
     // NAVIGATION
     // switch b/w buffers
     { "before": ["<Tab>"], "commands": [":bnext"] },
     { "before": ["<S-Tab>"], "commands": [":bprevious"] },
-    // close buffer 
+    // close buffer
     { "before": ["leader", "x"], "commands": [":bd"] },
-    
+
     // splits
     { "before": ["leader", "v"], "commands": [":vsplit"] },
     { "before": ["leader", "s"], "commands": [":split"] },
@@ -73,41 +74,73 @@
     // DEBUGGING
     {
       "before": ["leader", "d", "b"],
-      "commands": ["workbench.action.debug.start"],
+      "commands": ["workbench.action.debug.start"]
+    },
+    {
+      "before": ["leader", "d", "r"],
+      "commands": ["workbench.action.debug.restart"]
     },
     {
       "before": ["leader", "d", "s"],
       "commands": ["workbench.action.debug.stop"]
     },
+    {
+      "before": ["leader", "d", "t"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
     // PROBLEMS (matched to neovim trouble plugin)
     {
-      "before": ["leader", "t", "x"], "commands": ["workbench.actions.view.problems"]
+      "before": ["leader", "t", "x"],
+      "commands": ["workbench.actions.view.problems"]
     },
     // GO TO DEFINITION and IMPLEMENTATIONS (matched to telescope plugin)
-    { "before": ["leader", "g", "d"], "commands": ["editor.action.revealDefinition"]},
-    { "before": ["leader", "g", "D"], "commands": ["editor.action.peekDefinition"]},
-    { "before": ["leader", "g", "i"], "commands": ["editor.action.goToImplementation"]},
-    { "before": ["leader", "g", "I"], "commands": ["editor.action.peekImplementation"]},
+    {
+      "before": ["leader", "g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["leader", "g", "D"],
+      "commands": ["editor.action.peekDefinition"]
+    },
+    {
+      "before": ["leader", "g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["leader", "g", "I"],
+      "commands": ["editor.action.peekImplementation"]
+    },
     //REFERENCES (matched to telescope plugin)
-    { "before": ["<leader>", "g", "r" ], "commands": [ "references-view.findReferences" ] },
+    {
+      "before": ["<leader>", "g", "r"],
+      "commands": ["references-view.findReferences"]
+    },
     //HOVER
     { "before": ["K"], "commands": ["editor.action.showHover"] },
     //QUICKFIX (matched to neovim lsp code actions)
-    { "before": ["<leader>", "c", "a"], "commands": ["editor.action.quickFix"] },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
     //CUSTOM
-    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z" ] },
-    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z" ] },
+    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
+    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
     { "before": ["leader", "w"], "commands": [":w!"] },
-    { "before": ["leader", "W"], "commands": ["saveAll"]},
+    { "before": ["leader", "W"], "commands": ["saveAll"] },
     { "before": ["leader", "q"], "commands": [":q!"] },
+    //rename variable or class or function
+    { "before": ["leader", "r"], "commands": ["editor.action.rename"] },
     //brings up the find and replace menu expanded unlike Ctrl+F, but it's still not as good as vims search and replace (:s/old/new/gc)
-    { "before": ["leader", "f"], "commands": ["editor.action.startFindReplaceAction"]},
+    {
+      "before": ["leader", "f"],
+      "commands": ["editor.action.startFindReplaceAction"]
+    }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     { "before": ["<C-j>"], "after": ["<Down>"] },
     { "before": ["<C-k>"], "after": ["<Up>"] },
     { "before": ["<C-h>"], "after": ["<Left>"] },
-    { "before": ["<C-l>"], "after": ["<Right>"] },
+    { "before": ["<C-l>"], "after": ["<Right>"] }
   ],
   "vim.visualModeKeyBindings": [
     // Stay in visual mode while indenting
@@ -119,4 +152,9 @@
     // toggle comment selection
     { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
   ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
+  ],
+  "dart.debugExternalPackageLibraries": true,
+  "dart.debugSdkLibraries": true
 }

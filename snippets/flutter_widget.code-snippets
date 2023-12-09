@@ -48,7 +48,7 @@
 			"  _Model(super.store);",
 			"",
 			"   @override",
-			"   List get values => []"
+			"   List get values => [];"
 			"}"
 		],
 		"description": "Flutter Redux Stateless Widget"
@@ -98,7 +98,7 @@
 			"  _Model(super.store);",
 			"",
 			"   @override",
-			"   List get values => []"
+			"   List get values => [];"
 			"}"
 		],
 		"description": "Flutter Stateless Widget"
