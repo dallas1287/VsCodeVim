@@ -85,17 +85,17 @@
   {
     "command": "workbench.action.debug.stepOver",
     "key": "o",
-    "when": "debugState == 'Stopped' && vim.mode == 'Normal'"
+    "when": "debugState == 'stopped' && vim.mode == 'Normal'"
   },
   {
     "command": "workbench.action.debug.stepInto",
-    "key": "i",
-    "when": "debugState == 'Stopped' && vim.mode == 'Normal'"
+    "key": "ctrl+t",
+    "when": "debugState != 'inactive' && vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "command": "workbench.action.debug.stepOut",
     "key": "u",
-    "when": "debugState == 'Stopped' && vim.mode == 'Normal'"
+    "when": "debugState == 'stopped' && vim.mode == 'Normal'"
   },
   //CODE SUGGESTIONS
   {

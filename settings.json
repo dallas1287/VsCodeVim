@@ -150,10 +150,10 @@
     { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
     // toggle comment selection
-    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
+    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
+    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] }
   ],
   "dart.debugExternalPackageLibraries": true,
   "dart.debugSdkLibraries": true

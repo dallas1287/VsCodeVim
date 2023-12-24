@@ -21,6 +21,8 @@
 			"import 'package:flutter/material.dart';",
 			"",
 			"class ${0:WidgetName} extends StatelessWidget {",
+			"	const ${0:WidgetName}({super.key});"
+			""
 			"  @override",
 			"  Widget build(BuildContext context) {",
 			"    return Container();",
@@ -36,6 +38,8 @@
 			"import 'package:flutter_redux/flutter_redux.dart';",
 			"",
 			"class ${0:WidgetName} extends StatelessWidget {",
+			"	const ${0:WidgetName}({super.key});"
+			""
 			"  @override",
 			"  Widget build(BuildContext context) {",
 			"    return StoreConnector<AppState, _Model>(converter: (store) => _Model(store),",
@@ -59,7 +63,7 @@
 			"import 'package:flutter/material.dart';",
 			"",
 			"class ${0:WidgetName} extends StatefulWidget {",
-			"  const ${0:WidgetName}({Key? key}) : super(key: key);",
+			"  const ${0:WidgetName}({super.key});",
 			"  @override",
 			"  State<StatefulWidget> createState() => _${0:WidgetName}();",
 			"}",
@@ -71,7 +75,7 @@
 			"  }",
 			"}"
 		],
-		"description": "Flutter Stateless Widget"
+		"description": "Flutter Stateful Widget"
 	},
 	"Flutter Redux Stateful Widget": {
 		"prefix": [ "frful" ],
@@ -80,7 +84,7 @@
 			"import 'package:flutter_redux/flutter_redux.dart';",
 			"",
 			"class ${0:WidgetName} extends StatefulWidget {",
-			"  const ${0:WidgetName}({Key? key}) : super(key: key);",
+			"  const ${0:WidgetName}({super.key});",
 			"  @override",
 			"  State<StatefulWidget> createState() => _${0:WidgetName}();",
 			"}",
