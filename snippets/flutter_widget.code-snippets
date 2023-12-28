@@ -106,5 +106,40 @@
 			"}"
 		],
 		"description": "Flutter Stateless Widget"
+	},
+	"Flutter Redux Stateful Widget with Model": {
+		"prefix": [ "frmful" ],
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_redux/flutter_redux.dart';",
+			"",
+			"class ${0:WidgetName} extends StatefulWidget {",
+			"  const ${0:WidgetName}({super.key});",
+			"  @override",
+			"  State<StatefulWidget> createState() => _${0:WidgetName}();",
+			"}",
+			"",
+			"class _${0:WidgetName} extends State<${0:WidgetName}> {"
+			"  late _Model _model;",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return StoreConnector<AppState, _Model>(converter: (store) => _Model(store),",
+			"	  builder: (context, model) => Container(),",
+			"	  distinct: true,"
+        	"	  onInit: (store) => _model = _Model(store),",
+        	"	  onWillChange: (old, newModel) => _model = newModel);"
+			"  }",
+			"}",
+			"",
+			"class _Model extends StatefulViewModel {",
+			"  _Model(super.store);",
+			"",
+			"   @override",
+			"   List get values => [];"
+			"}"
+		],
+		"description": "Flutter Stateless Widget"
 	}
+
 }
