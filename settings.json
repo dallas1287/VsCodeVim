@@ -29,6 +29,10 @@
     "markdown": false,
     "scminput": false
   },
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss",
+  },
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
@@ -150,11 +154,15 @@
     { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
     // toggle comment selection
-    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] }
+    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
+
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] }
+    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
+    // paste without overriding the current register
+    { "before": ["p"], "after": ["p", "g", "v", "y" ] }
   ],
   "dart.debugExternalPackageLibraries": true,
-  "dart.debugSdkLibraries": true
+  "dart.debugSdkLibraries": true,
+  "svelte.enable-ts-plugin": true
 }
