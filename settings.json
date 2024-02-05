@@ -6,6 +6,27 @@
       "interface:csharp": { "foreground": "#aaaadc" }
     }
   },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[vue]":{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
   "security.workspace.trust.untrustedFiles": "open",
   "editor.formatOnSave": true,
   "[python]": {
@@ -31,7 +52,7 @@
   },
   "files.associations": {
     "*.css": "tailwindcss",
-    "*.scss": "tailwindcss",
+    "*.scss": "tailwindcss"
   },
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
@@ -154,13 +175,12 @@
     { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
     // toggle comment selection
-    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
-
+    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
     // paste without overriding the current register
-    { "before": ["p"], "after": ["p", "g", "v", "y" ] }
+    { "before": ["p"], "after": ["p", "g", "v", "y"] }
   ],
   "dart.debugExternalPackageLibraries": true,
   "dart.debugSdkLibraries": true,
