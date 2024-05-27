@@ -22,7 +22,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "[vue]":{
+  "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
@@ -48,7 +48,6 @@
     "editor.wordBasedSuggestions": "off"
   },
   "editor.accessibilitySupport": "off",
-  "diffEditor.ignoreTrimWhitespace": false,
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
@@ -189,5 +188,6 @@
   ],
   "dart.debugExternalPackageLibraries": true,
   "dart.debugSdkLibraries": true,
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "github.copilot.editor.enableAutoCompletions": true
 }
