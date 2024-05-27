@@ -1,5 +1,5 @@
 // Place your key bindings in this file to override the defaults
-[ 
+[
   //TERMINAL 
   {
     "key": "ctrl+t",
@@ -144,5 +144,10 @@
   {
     "key": "alt+z",
     "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   }
 ]
