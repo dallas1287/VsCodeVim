@@ -57,6 +57,11 @@
     "when": "sideBarFocus"
   },
   {
+    "command": "workbench.action.focusActiveEditorGroup",
+    "key": "ctrl+l",
+    "when": "chatViewletVisible"
+  },
+  {
     "key": "a",
     "command": "explorer.newFile",
     "when": "filesExplorerFocus && !inputFocus"
@@ -120,12 +125,7 @@
   },
   //COPILOT
   {
-    "command": "workbench.action.openChat.copilot",
-    "key": "alt+p",
-    "when": "editorTextFocus && vim.mode == 'Normal'"
-  },
-  {
-    "command": "workbench.action.openQuickChat.copilot",
+    "command": "workbench.panel.chat.view.copilot.focus",
     "key": "alt+c",
     "when": "editorTextFocus && vim.mode == 'Normal'"
   },

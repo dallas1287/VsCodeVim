@@ -189,5 +189,10 @@
   "dart.debugExternalPackageLibraries": true,
   "dart.debugSdkLibraries": true,
   "svelte.enable-ts-plugin": true,
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "dev.containers.executeInWSL": true
 }
